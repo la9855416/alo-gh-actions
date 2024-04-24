@@ -1,0 +1,32 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Exemplo de Fluxo de Trabalho
+
+# Evento que vai ativar o workflow
+# Controls when the workflow will run
+on: 
+  # Allows you to run this workflow manually from the Actions tab
+  # Ativar o fluxo de trabalho atraves de ação manual
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# Workflow pode ter um ou mais jobs
+jobs:
+  # This workflow contains a single job called acao_inicial_job
+  acao_inicial_job:
+    # The type of runner that the job will run on
+    #quando define job tem que dizer onde vai ser executado, runner, MV que vai ser provisionada para rodar o pipeline. No caso vai ser no ubuntu, última versão estável
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    # Descrever os passos do job
+    steps:
+            # Runs a single command using the runners shell
+      # Nome do passo
+      # em seguida pode ter a execução de um comando/script ou uma ação que é um objeto pré configurado dentro da arquitetura do github actions
+      - name: Imprimir Hello, world!
+        run: echo Hello, world!
+      - name: Imprimir Bye
+        run: echo "Bye"
+
+ 
